@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Math Game View Controller-->
+        <scene sceneID="y5A-vm-nb5">
+            <objects>
+                <viewController id="eXt-9J-WGX" customClass="MathGameViewController" customModule="Doodle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6ro-RP-s1U"/>
+                        <viewControllerLayoutGuide type="bottom" id="9rc-8Q-i4f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qq4-S4-WQH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0j-Ux-tT5">
+                                <rect key="frame" x="16" y="20" width="32" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="☜">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zH6-OK-boS" kind="unwind" unwindAction="mathBackButtonTouched:" id="aLc-OA-REg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="w0j-Ux-tT5" firstAttribute="top" secondItem="6ro-RP-s1U" secondAttribute="bottom" id="Fvw-dN-rcE"/>
+                            <constraint firstItem="w0j-Ux-tT5" firstAttribute="leading" secondItem="qq4-S4-WQH" secondAttribute="leadingMargin" id="NKN-m1-Ia7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9cp-XI-IjA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="zH6-OK-boS" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="-461"/>
+        </scene>
+        <!--Memory Game View Controller-->
+        <scene sceneID="wUj-xd-BiI">
+            <objects>
+                <viewController id="pJp-aR-KBz" customClass="MemoryGameViewController" customModule="Doodle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1da-f1-oJn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Eoq-8d-g0g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Edt-SV-8hr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ai-wV-0j9">
+                                <rect key="frame" x="16" y="20" width="32" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="☜">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rxZ-dQ-qpZ" kind="unwind" unwindAction="memoryBackButtonTouched:" id="jKC-Pa-M5S"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1w8-DZ-Qzi" customClass="Card" customModule="Doodle" customModuleProvider="target">
+                                <rect key="frame" x="265" y="88" width="70" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="7NX-H0-RiH"/>
+                                    <constraint firstAttribute="height" constant="100" id="k4m-vp-2zZ"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="A7b-Mn-dly" appends="YES" id="xn6-8w-Gls"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szG-jU-SQF" customClass="Card" customModule="Doodle" customModuleProvider="target">
+                                <rect key="frame" x="343" y="88" width="70" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="WKK-u3-TSJ"/>
+                                    <constraint firstAttribute="height" constant="100" id="xN2-uV-YjE"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="yNH-Kv-Q6q" appends="YES" id="aTV-bC-KYq"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7qQ-Gt-bfL" customClass="Card" customModule="Doodle" customModuleProvider="target">
+                                <rect key="frame" x="187" y="88" width="70" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="A7i-aC-sA5"/>
+                                    <constraint firstAttribute="height" constant="100" id="wSD-dD-Qoq"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Xm3-bh-88j" appends="YES" id="BZy-4b-qDE"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHC-Sw-wfr" customClass="Card" customModule="Doodle" customModuleProvider="target">
+                                <rect key="frame" x="187" y="196" width="70" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="MOc-Wx-LlC"/>
+                                    <constraint firstAttribute="width" constant="70" id="o2w-ZW-xtV"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="OFm-zB-mCi" appends="YES" id="SRA-l6-Mpa"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alU-Y1-VBw" customClass="Card" customModule="Doodle" customModuleProvider="target">
+                                <rect key="frame" x="265" y="196" width="70" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="99b-Iq-GEX"/>
+                                    <constraint firstAttribute="height" constant="100" id="awO-WT-QNj"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Rbo-WL-9ta" appends="YES" id="dle-6Y-J2G"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wkl-EG-oBS" customClass="Card" customModule="Doodle" customModuleProvider="target">
+                                <rect key="frame" x="187" y="304" width="70" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="zBj-jL-F81"/>
+                                    <constraint firstAttribute="width" constant="70" id="zIf-6d-x4c"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="chM-Cq-uH2" appends="YES" id="QPQ-Zi-XgH"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OAg-MW-nXT" customClass="Card" customModule="Doodle" customModuleProvider="target">
+                                <rect key="frame" x="265" y="304" width="70" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="4dX-BE-6MX"/>
+                                    <constraint firstAttribute="width" constant="70" id="lOH-FT-fMM"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="k4W-72-eEP" appends="YES" id="ZH4-nN-q78"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LnJ-LH-QGk" customClass="Card" customModule="Doodle" customModuleProvider="target">
+                                <rect key="frame" x="343" y="304" width="70" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="GC0-BQ-ClO"/>
+                                    <constraint firstAttribute="width" constant="70" id="Ucc-gQ-nJT"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gKd-Qa-hez" appends="YES" id="z0W-4i-Isq"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbj-3C-SUX" customClass="Card" customModule="Doodle" customModuleProvider="target">
+                                <rect key="frame" x="187" y="412" width="70" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="89a-K4-dKM"/>
+                                    <constraint firstAttribute="height" constant="100" id="BcX-CH-xMO"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="rKQ-5J-vfg" appends="YES" id="hwh-2W-hZl"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1C9-ur-LJd" customClass="Card" customModule="Doodle" customModuleProvider="target">
+                                <rect key="frame" x="265" y="412" width="70" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="E2o-e1-OKt"/>
+                                    <constraint firstAttribute="width" constant="70" id="Ius-qg-f0Q"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="FCx-HM-0tl" appends="YES" id="tgu-tL-upw"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kNi-e8-qDH" customClass="Card" customModule="Doodle" customModuleProvider="target">
+                                <rect key="frame" x="343" y="412" width="70" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="50q-c8-2ti"/>
+                                    <constraint firstAttribute="width" constant="70" id="DYL-DW-5Oe"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="zLS-jl-hfg" appends="YES" id="0Ge-lr-Bdb"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGO-Ob-RCT">
+                                <rect key="frame" x="508" y="20" width="76" height="30"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newGame" destination="pJp-aR-KBz" eventType="touchUpInside" id="UkD-aA-LIP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIr-Wj-E4a">
+                                <rect key="frame" x="16" y="559" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LUd-pb-gIF" customClass="Card" customModule="Doodle" customModuleProvider="target">
+                                <rect key="frame" x="343" y="196" width="70" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Cc1-c4-RXE"/>
+                                    <constraint firstAttribute="height" constant="100" id="L5d-9G-8cZ"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vli-gn-Ah2" appends="YES" id="ekb-M7-NAf"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iHC-Sw-wfr" firstAttribute="top" secondItem="alU-Y1-VBw" secondAttribute="top" id="0Kl-EC-lkr"/>
+                            <constraint firstItem="7qQ-Gt-bfL" firstAttribute="top" secondItem="1w8-DZ-Qzi" secondAttribute="top" id="5Hc-wv-3vY"/>
+                            <constraint firstItem="1ai-wV-0j9" firstAttribute="leading" secondItem="Edt-SV-8hr" secondAttribute="leadingMargin" id="5vb-57-0Jy"/>
+                            <constraint firstItem="ZGO-Ob-RCT" firstAttribute="top" secondItem="1da-f1-oJn" secondAttribute="bottom" id="BmG-UY-kJc"/>
+                            <constraint firstItem="1w8-DZ-Qzi" firstAttribute="centerX" secondItem="Edt-SV-8hr" secondAttribute="centerX" id="Hdw-89-oMm"/>
+                            <constraint firstItem="OAg-MW-nXT" firstAttribute="leading" secondItem="alU-Y1-VBw" secondAttribute="leading" id="IGI-v9-N39"/>
+                            <constraint firstItem="szG-jU-SQF" firstAttribute="leading" secondItem="LUd-pb-gIF" secondAttribute="leading" id="IoA-ch-hwh"/>
+                            <constraint firstItem="wbj-3C-SUX" firstAttribute="leading" secondItem="Wkl-EG-oBS" secondAttribute="leading" id="K3R-gE-FYS"/>
+                            <constraint firstItem="1ai-wV-0j9" firstAttribute="top" secondItem="1da-f1-oJn" secondAttribute="bottom" id="KIp-OM-ZyB"/>
+                            <constraint firstItem="Eoq-8d-g0g" firstAttribute="top" secondItem="OIr-Wj-E4a" secondAttribute="bottom" constant="20" id="Kmz-6B-9aP"/>
+                            <constraint firstItem="ZGO-Ob-RCT" firstAttribute="trailing" secondItem="Edt-SV-8hr" secondAttribute="trailingMargin" id="Mwp-wt-DzN"/>
+                            <constraint firstItem="OIr-Wj-E4a" firstAttribute="trailing" secondItem="Edt-SV-8hr" secondAttribute="trailingMargin" id="Oba-1G-Tg0"/>
+                            <constraint firstItem="Wkl-EG-oBS" firstAttribute="top" secondItem="iHC-Sw-wfr" secondAttribute="bottom" constant="8" symbolic="YES" id="OfJ-qv-3ms"/>
+                            <constraint firstItem="Wkl-EG-oBS" firstAttribute="leading" secondItem="iHC-Sw-wfr" secondAttribute="leading" id="Oo2-6g-MkL"/>
+                            <constraint firstItem="szG-jU-SQF" firstAttribute="leading" secondItem="1w8-DZ-Qzi" secondAttribute="trailing" constant="8" symbolic="YES" id="PCQ-el-nd9"/>
+                            <constraint firstItem="OAg-MW-nXT" firstAttribute="top" secondItem="Wkl-EG-oBS" secondAttribute="top" id="STL-pI-BKI"/>
+                            <constraint firstItem="1w8-DZ-Qzi" firstAttribute="leading" secondItem="alU-Y1-VBw" secondAttribute="leading" id="Sln-61-Dps"/>
+                            <constraint firstItem="OIr-Wj-E4a" firstAttribute="leading" secondItem="Edt-SV-8hr" secondAttribute="leadingMargin" id="VeT-gQ-EAl"/>
+                            <constraint firstItem="7qQ-Gt-bfL" firstAttribute="top" secondItem="1da-f1-oJn" secondAttribute="bottom" constant="68" id="WQa-u9-f6H"/>
+                            <constraint firstItem="1w8-DZ-Qzi" firstAttribute="top" secondItem="szG-jU-SQF" secondAttribute="top" id="Wag-Yr-IRg"/>
+                            <constraint firstItem="iHC-Sw-wfr" firstAttribute="leading" secondItem="7qQ-Gt-bfL" secondAttribute="leading" id="Wvd-Wc-6KH"/>
+                            <constraint firstItem="OAg-MW-nXT" firstAttribute="leading" secondItem="1C9-ur-LJd" secondAttribute="leading" id="cR7-63-xww"/>
+                            <constraint firstItem="wbj-3C-SUX" firstAttribute="top" secondItem="1C9-ur-LJd" secondAttribute="top" id="esX-uH-Ecr"/>
+                            <constraint firstItem="1w8-DZ-Qzi" firstAttribute="leading" secondItem="7qQ-Gt-bfL" secondAttribute="trailing" constant="8" symbolic="YES" id="f10-aB-w0x"/>
+                            <constraint firstItem="kNi-e8-qDH" firstAttribute="leading" secondItem="LnJ-LH-QGk" secondAttribute="leading" id="k6l-t7-qV2"/>
+                            <constraint firstItem="alU-Y1-VBw" firstAttribute="top" secondItem="LUd-pb-gIF" secondAttribute="top" id="od1-PW-IaF"/>
+                            <constraint firstItem="OAg-MW-nXT" firstAttribute="top" secondItem="LnJ-LH-QGk" secondAttribute="top" id="q9O-5f-jJ1"/>
+                            <constraint firstItem="wbj-3C-SUX" firstAttribute="top" secondItem="Wkl-EG-oBS" secondAttribute="bottom" constant="8" symbolic="YES" id="t2z-zg-B68"/>
+                            <constraint firstItem="iHC-Sw-wfr" firstAttribute="top" secondItem="7qQ-Gt-bfL" secondAttribute="bottom" constant="8" symbolic="YES" id="uAn-hs-Y2C"/>
+                            <constraint firstItem="LnJ-LH-QGk" firstAttribute="leading" secondItem="LUd-pb-gIF" secondAttribute="leading" id="vtK-yh-pQu"/>
+                            <constraint firstItem="kNi-e8-qDH" firstAttribute="top" secondItem="1C9-ur-LJd" secondAttribute="top" id="yZ4-de-UPC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="levelLabel" destination="OIr-Wj-E4a" id="j8D-iw-6rD"/>
+                        <outletCollection property="cards" destination="7qQ-Gt-bfL" collectionClass="NSMutableArray" id="cag-gk-wu9"/>
+                        <outletCollection property="cards" destination="1w8-DZ-Qzi" collectionClass="NSMutableArray" id="U2f-qm-WZU"/>
+                        <outletCollection property="cards" destination="szG-jU-SQF" collectionClass="NSMutableArray" id="hE4-1K-ePH"/>
+                        <outletCollection property="cards" destination="iHC-Sw-wfr" collectionClass="NSMutableArray" id="QDZ-l5-ZZU"/>
+                        <outletCollection property="cards" destination="alU-Y1-VBw" collectionClass="NSMutableArray" id="x31-Zw-hEr"/>
+                        <outletCollection property="cards" destination="LUd-pb-gIF" collectionClass="NSMutableArray" id="d3I-R0-jvX"/>
+                        <outletCollection property="cards" destination="Wkl-EG-oBS" collectionClass="NSMutableArray" id="Gvc-vo-AMS"/>
+                        <outletCollection property="cards" destination="OAg-MW-nXT" collectionClass="NSMutableArray" id="AMw-yr-dFM"/>
+                        <outletCollection property="cards" destination="LnJ-LH-QGk" collectionClass="NSMutableArray" id="qH1-nO-7tl"/>
+                        <outletCollection property="cards" destination="wbj-3C-SUX" collectionClass="NSMutableArray" id="dPl-zp-qfA"/>
+                        <outletCollection property="cards" destination="1C9-ur-LJd" collectionClass="NSMutableArray" id="dcG-Rv-JOf"/>
+                        <outletCollection property="cards" destination="kNi-e8-qDH" collectionClass="NSMutableArray" id="BZK-ff-iDH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gJ1-J3-Xju" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="rxZ-dQ-qpZ" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="Xm3-bh-88j">
+                    <connections>
+                        <action selector="cardTapped:" destination="pJp-aR-KBz" id="uKg-fQ-Qm5"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="A7b-Mn-dly">
+                    <connections>
+                        <action selector="cardTapped:" destination="pJp-aR-KBz" id="TCG-sP-mvH"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="yNH-Kv-Q6q">
+                    <connections>
+                        <action selector="cardTapped:" destination="pJp-aR-KBz" id="UYJ-js-K0X"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="OFm-zB-mCi">
+                    <connections>
+                        <action selector="cardTapped:" destination="pJp-aR-KBz" id="hNi-N0-FLy"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Rbo-WL-9ta">
+                    <connections>
+                        <action selector="cardTapped:" destination="pJp-aR-KBz" id="69b-sj-Y2o"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="vli-gn-Ah2">
+                    <connections>
+                        <action selector="cardTapped:" destination="pJp-aR-KBz" id="1mP-b8-bsi"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="chM-Cq-uH2">
+                    <connections>
+                        <action selector="cardTapped:" destination="pJp-aR-KBz" id="rHQ-OK-ccO"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="k4W-72-eEP">
+                    <connections>
+                        <action selector="cardTapped:" destination="pJp-aR-KBz" id="cOM-uv-xsP"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="gKd-Qa-hez">
+                    <connections>
+                        <action selector="cardTapped:" destination="pJp-aR-KBz" id="Gre-FK-e6S"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="rKQ-5J-vfg">
+                    <connections>
+                        <action selector="cardTapped:" destination="pJp-aR-KBz" id="Ph8-im-zQP"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="FCx-HM-0tl">
+                    <connections>
+                        <action selector="cardTapped:" destination="pJp-aR-KBz" id="XUU-WI-eDR"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="zLS-jl-hfg">
+                    <connections>
+                        <action selector="cardTapped:" destination="pJp-aR-KBz" id="AQj-Nr-flt"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1005" y="273"/>
+        </scene>
+        <!--Your Profile-->
+        <scene sceneID="uOa-tV-xYf">
+            <objects>
+                <viewController id="CZ7-XI-tj1" customClass="ProfileViewController" customModule="Doodle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yPi-E9-oUA"/>
+                        <viewControllerLayoutGuide type="bottom" id="CCt-GX-YNa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OVQ-VF-8cD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Your Profile" id="NvN-l2-jEd">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="eHe-wI-wQg">
+                            <connections>
+                                <segue destination="1ON-4Z-TnJ" kind="unwind" unwindAction="settingsBackButtonTouched:" id="0Ml-Dm-cMj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7b5-Ql-HE6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1911" y="1703"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="RbF-bz-Ngb">
+            <objects>
+                <tabBarController id="IW5-6y-tSh" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="pp4-AK-q1M">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="YpF-mQ-fzG" kind="relationship" relationship="viewControllers" id="dJS-2H-XaJ"/>
+                        <segue destination="GgB-Q8-SSG" kind="relationship" relationship="viewControllers" id="1e8-IK-gTN"/>
+                        <segue destination="7ql-I8-j5R" kind="relationship" relationship="viewControllers" id="Ikt-EF-XMT"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UbH-Ob-qCv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1ON-4Z-TnJ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="279" y="2034"/>
+        </scene>
+        <!--Logic Game View Controller-->
+        <scene sceneID="av9-jF-yAl">
+            <objects>
+                <viewController id="vwz-1Q-11g" customClass="LogicGameViewController" customModule="Doodle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zhN-m6-ucE"/>
+                        <viewControllerLayoutGuide type="bottom" id="t0O-FH-423"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iLS-oP-xnF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Npb-pO-dHw">
+                                <rect key="frame" x="16" y="20" width="32" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="☜">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tYH-mu-Fbm" kind="unwind" unwindAction="logicBackButtonTouched:" id="rfA-bl-K0q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Npb-pO-dHw" firstAttribute="leading" secondItem="iLS-oP-xnF" secondAttribute="leadingMargin" id="T09-6w-KVA"/>
+                            <constraint firstItem="Npb-pO-dHw" firstAttribute="top" secondItem="zhN-m6-ucE" secondAttribute="bottom" id="lgT-lU-6jG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4jq-ZI-o9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tYH-mu-Fbm" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="991"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Doodle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTY-ub-tFf" customClass="UIImageView">
+                                <rect key="frame" x="246" y="28" width="108" height="108"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108" id="bUQ-U9-Bdz"/>
+                                    <constraint firstAttribute="height" constant="108" id="mtk-fc-QuB"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahc-yB-tC6" customClass="UIImageView">
+                                <rect key="frame" x="246" y="472" width="108" height="108"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="A5R-yP-GvK"/>
+                                    <constraint firstAttribute="width" constant="108" id="nEu-9F-Qvw"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WO5-qH-QTt" customClass="UIImageView">
+                                <rect key="frame" x="476" y="246" width="108" height="108"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="Jrg-GC-IED"/>
+                                    <constraint firstAttribute="width" constant="108" id="wUN-iT-bXm"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QyH-QG-9ho" customClass="UIImageView">
+                                <rect key="frame" x="16" y="246" width="108" height="108"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="3Aw-9Y-fHt"/>
+                                    <constraint firstAttribute="width" constant="108" id="ScO-Re-75m"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="WO5-qH-QTt" secondAttribute="centerY" id="AXy-eZ-ngp"/>
+                            <constraint firstItem="WO5-qH-QTt" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="LMS-Pz-ryO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ahc-yB-tC6" secondAttribute="bottom" constant="20" id="YD1-ot-8jf"/>
+                            <constraint firstItem="QyH-QG-9ho" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kdN-sq-8BH"/>
+                            <constraint firstAttribute="centerX" secondItem="ahc-yB-tC6" secondAttribute="centerX" id="mjn-hG-l2I"/>
+                            <constraint firstAttribute="centerX" secondItem="KTY-ub-tFf" secondAttribute="centerX" id="p1F-id-9nO"/>
+                            <constraint firstItem="KTY-ub-tFf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="uDd-EQ-Tgg"/>
+                            <constraint firstAttribute="centerY" secondItem="QyH-QG-9ho" secondAttribute="centerY" id="yaR-4n-toq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logicIcon" destination="QyH-QG-9ho" id="0tv-mu-Yuq"/>
+                        <outlet property="mathIcon" destination="WO5-qH-QTt" id="KRc-gA-iNw"/>
+                        <outlet property="memoryIcon" destination="KTY-ub-tFf" id="NiO-Rr-ecK"/>
+                        <outlet property="settingsIcon" destination="ahc-yB-tC6" id="zlk-Vf-yUv"/>
+                        <segue destination="eXt-9J-WGX" kind="presentation" identifier="mathSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="Vip-Dz-q2o"/>
+                        <segue destination="pJp-aR-KBz" kind="show" identifier="memorySegue" id="bwL-a3-XWp"/>
+                        <segue destination="vwz-1Q-11g" kind="show" identifier="logicSegue" id="vt6-8R-mwy"/>
+                        <segue destination="IW5-6y-tSh" kind="presentation" identifier="settingsSegue" id="F0y-OF-0R1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-49" y="441"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="8Ma-OU-rYD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YpF-mQ-fzG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="profilesymbols" id="3l9-nE-LLe"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u9X-jq-6d5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CZ7-XI-tj1" kind="relationship" relationship="rootViewController" id="tPb-Qp-Weq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5sC-An-tOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1099" y="1703"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="GIj-Vd-4Sp">
+            <objects>
+                <tableViewController id="F0U-R1-Of4" customClass="HistoryTableViewController" customModule="Doodle" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="yTY-DK-zxH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Jnx-t2-Tkd">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jnx-t2-Tkd" id="iFn-c9-Xfh">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="F0U-R1-Of4" id="eZm-mB-ii8"/>
+                            <outlet property="delegate" destination="F0U-R1-Of4" id="IFY-ob-88n"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="History" id="Cyg-hJ-88Q">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="qJo-sA-Dzk">
+                            <connections>
+                                <segue destination="1ON-4Z-TnJ" kind="unwind" unwindAction="settingsBackButtonTouched:" id="b1P-8k-zXW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Az3-92-4mN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1911" y="2402"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="JoN-dH-NE0">
+            <objects>
+                <tableViewController id="EGs-Le-ZUX" customClass="SettingsTableViewController" customModule="Doodle" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="v32-LW-XVN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5hk-nt-LLU">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5hk-nt-LLU" id="hFT-rj-kak">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EGs-Le-ZUX" id="5LP-hq-wUX"/>
+                            <outlet property="delegate" destination="EGs-Le-ZUX" id="iKD-GV-2wj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="DEE-b7-NKQ">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="HgZ-5S-iQx">
+                            <connections>
+                                <segue destination="1ON-4Z-TnJ" kind="unwind" unwindAction="settingsBackButtonTouched:" id="ZEq-Sh-f5X"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wso-EV-XnR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1887" y="3265"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="W9X-e2-lwj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GgB-Q8-SSG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="History" image="historysymbols" id="Vuc-Az-QsZ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k0W-Mz-Xze">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="F0U-R1-Of4" kind="relationship" relationship="rootViewController" id="daf-eR-fzO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="edj-e1-uwt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1099" y="2402"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="Ugf-L8-gh6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7ql-I8-j5R" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="settingstablesymbols" id="lhM-Gq-jZX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YCf-1S-vIx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EGs-Le-ZUX" kind="relationship" relationship="rootViewController" id="vrw-PR-ugW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eDv-h1-BrL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1075" y="3265"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="historysymbols" width="32" height="32"/>
+        <image name="profilesymbols" width="32" height="32"/>
+        <image name="settingstablesymbols" width="53" height="53"/>
+    </resources>
+</document>
