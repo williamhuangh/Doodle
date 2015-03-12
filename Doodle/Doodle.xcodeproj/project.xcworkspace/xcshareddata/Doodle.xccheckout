@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>55937BCC-251A-492E-9C28-77E04DD2EDBB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Doodle</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>322C669BEE079CEA43E92C7E16A4E22BBDD23EEC</key>
+		<string>https://github.com/williamhuangh/Doodle.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Doodle/Doodle.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>322C669BEE079CEA43E92C7E16A4E22BBDD23EEC</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/williamhuangh/Doodle.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>322C669BEE079CEA43E92C7E16A4E22BBDD23EEC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>322C669BEE079CEA43E92C7E16A4E22BBDD23EEC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Doodle</string>
+		</dict>
+	</array>
+</dict>
+</plist>

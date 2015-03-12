@@ -37,6 +37,21 @@ class MemoryGameViewController: UIViewController, MemoryGameLogicDelegate {
         self.levelLabel.text = "Level: \(newLevel)"
     }
     
+    func displayRestartAndEndOptions(sender: MemoryGameLogic){
+        var alert = UIAlertController(title: "You Won!", message: "Restart Game?", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(
+            title: "Yes", style: .Default, handler: { (act) -> Void in
+                self.newGame()
+            }
+        ))
+        alert.addAction(UIAlertAction(
+            title: "No", style: .Default, handler: { (act) -> Void in
+                self.performSegueWithIdentifier("exitMemoryGame", sender: self)
+            }
+        ))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
     override func shouldAutorotate() -> Bool {
         return false
     }
