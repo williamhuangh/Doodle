@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3D0971801AB0206200994B14 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D09717F1AB0206200994B14 /* Card.swift */; };
 		3D0971821AB0236B00994B14 /* MemoryGameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0971811AB0236B00994B14 /* MemoryGameLogic.swift */; };
+		3D0971871AB14B2F00994B14 /* MathGameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0971861AB14B2F00994B14 /* MathGameLogic.swift */; };
+		3D09718A1AB15AE700994B14 /* EquationVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0971891AB15AE700994B14 /* EquationVariable.swift */; };
 		3DFBBA0F1AA99E100078A02E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFBBA0E1AA99E100078A02E /* AppDelegate.swift */; };
 		3DFBBA111AA99E100078A02E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFBBA101AA99E100078A02E /* ViewController.swift */; };
 		3DFBBA141AA99E100078A02E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DFBBA121AA99E100078A02E /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* Begin PBXFileReference section */
 		3D09717F1AB0206200994B14 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		3D0971811AB0236B00994B14 /* MemoryGameLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryGameLogic.swift; sourceTree = "<group>"; };
+		3D0971861AB14B2F00994B14 /* MathGameLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathGameLogic.swift; sourceTree = "<group>"; };
+		3D0971891AB15AE700994B14 /* EquationVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquationVariable.swift; sourceTree = "<group>"; };
 		3DFBBA091AA99E100078A02E /* Doodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFBBA0D1AA99E100078A02E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DFBBA0E1AA99E100078A02E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 		3D09717D1AB0201E00994B14 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3D0971851AB14B1000994B14 /* MathGameModel */,
 				3D09717E1AB0203000994B14 /* MemoryGameModel */,
 			);
 			name = Model;
@@ -91,6 +96,7 @@
 		3D0971831AB023A300994B14 /* GamesViews */ = {
 			isa = PBXGroup;
 			children = (
+				3D0971881AB15A8700994B14 /* MathGameViews */,
 				3D0971841AB023B300994B14 /* MemoryGameViews */,
 			);
 			name = GamesViews;
@@ -102,6 +108,22 @@
 				3D09717F1AB0206200994B14 /* Card.swift */,
 			);
 			name = MemoryGameViews;
+			sourceTree = "<group>";
+		};
+		3D0971851AB14B1000994B14 /* MathGameModel */ = {
+			isa = PBXGroup;
+			children = (
+				3D0971861AB14B2F00994B14 /* MathGameLogic.swift */,
+			);
+			name = MathGameModel;
+			sourceTree = "<group>";
+		};
+		3D0971881AB15A8700994B14 /* MathGameViews */ = {
+			isa = PBXGroup;
+			children = (
+				3D0971891AB15AE700994B14 /* EquationVariable.swift */,
+			);
+			name = MathGameViews;
 			sourceTree = "<group>";
 		};
 		3DFBBA001AA99E100078A02E = {
@@ -285,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DFBBA441AAAE93E0078A02E /* HistoryTableViewController.swift in Sources */,
+				3D09718A1AB15AE700994B14 /* EquationVariable.swift in Sources */,
 				3D0971801AB0206200994B14 /* Card.swift in Sources */,
 				3DFBBA401AAAE9020078A02E /* ProfileViewController.swift in Sources */,
 				3DFBBA111AA99E100078A02E /* ViewController.swift in Sources */,
@@ -293,6 +316,7 @@
 				3DFBBA3D1AAA65B10078A02E /* LogicGameViewController.swift in Sources */,
 				3D0971821AB0236B00994B14 /* MemoryGameLogic.swift in Sources */,
 				3DFBBA0F1AA99E100078A02E /* AppDelegate.swift in Sources */,
+				3D0971871AB14B2F00994B14 /* MathGameLogic.swift in Sources */,
 				3DFBBA421AAAE9290078A02E /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

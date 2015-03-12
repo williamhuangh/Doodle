@@ -24,16 +24,125 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="zH6-OK-boS" kind="unwind" unwindAction="mathBackButtonTouched:" id="aLc-OA-REg"/>
+                                    <segue destination="zH6-OK-boS" kind="unwind" identifier="exitMathGame" unwindAction="mathBackButtonTouched:" id="aLc-OA-REg"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybt-3v-LBb">
+                                <rect key="frame" x="16" y="559" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozw-C2-Ptc">
+                                <rect key="frame" x="508" y="28" width="76" height="30"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newGame" destination="eXt-9J-WGX" eventType="touchUpInside" id="TP8-KA-Ivs"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJa-zi-s7U" customClass="EquationVariable" customModule="Doodle" customModuleProvider="target">
+                                <rect key="frame" x="257" y="226" width="86" height="148"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="148" id="AIJ-En-k29"/>
+                                    <constraint firstAttribute="width" constant="86" id="uY7-zg-wkJ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="475-9A-5HC">
+                                <rect key="frame" x="370" y="226" width="86" height="148"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="148" id="EBR-HQ-UbY"/>
+                                    <constraint firstAttribute="width" constant="86" id="qPu-KX-d46"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0b-tC-KKJ" customClass="EquationVariable" customModule="Doodle" customModuleProvider="target">
+                                <rect key="frame" x="146" y="226" width="86" height="148"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="S3H-M8-yu7"/>
+                                    <constraint firstAttribute="height" constant="148" id="Sij-Uk-XZg"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odQ-Y0-clt">
+                                <rect key="frame" x="351" y="289" width="10.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3o1-cb-hTQ">
+                                <rect key="frame" x="238" y="289" width="10.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Wfc-3T-kv5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Frh-iy-tMk" customClass="EquationVariable" customModule="Doodle" customModuleProvider="target">
+                                <rect key="frame" x="217" y="475" width="50.5" height="76"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="Zdo-v0-R8N"/>
+                                    <constraint firstAttribute="width" constant="50.5" id="kIj-Dd-HdN"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Om3-Ha-SLh" customClass="EquationVariable" customModule="Doodle" customModuleProvider="target">
+                                <rect key="frame" x="275" y="475" width="50.5" height="76"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="4RB-Jr-tY6"/>
+                                    <constraint firstAttribute="width" constant="50.5" id="8Rp-Nu-wyw"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ITj-VZ-VMz" customClass="EquationVariable" customModule="Doodle" customModuleProvider="target">
+                                <rect key="frame" x="333" y="475" width="50.5" height="76"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="TpO-X7-Ihn"/>
+                                    <constraint firstAttribute="width" constant="50.5" id="qTW-IU-KYM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ITj-VZ-VMz" firstAttribute="leading" secondItem="Om3-Ha-SLh" secondAttribute="trailing" constant="7.5" id="15J-Mj-8pQ"/>
+                            <constraint firstItem="9rc-8Q-i4f" firstAttribute="top" secondItem="Ybt-3v-LBb" secondAttribute="bottom" constant="20" id="1td-3F-RQm"/>
+                            <constraint firstAttribute="centerY" secondItem="L0b-tC-KKJ" secondAttribute="centerY" id="3Ze-px-Kd1"/>
+                            <constraint firstItem="Ybt-3v-LBb" firstAttribute="top" secondItem="ITj-VZ-VMz" secondAttribute="bottom" constant="8" id="4Vc-2I-80a"/>
+                            <constraint firstAttribute="centerY" secondItem="3o1-cb-hTQ" secondAttribute="centerY" constant="0.5" id="557-FU-Muz"/>
+                            <constraint firstAttribute="centerX" secondItem="cJa-zi-s7U" secondAttribute="centerX" id="747-Tu-jep"/>
+                            <constraint firstItem="Ybt-3v-LBb" firstAttribute="leading" secondItem="qq4-S4-WQH" secondAttribute="leadingMargin" id="82S-Xw-gNR"/>
+                            <constraint firstItem="cJa-zi-s7U" firstAttribute="leading" secondItem="3o1-cb-hTQ" secondAttribute="trailing" constant="8" id="9Hl-td-ud9"/>
+                            <constraint firstAttribute="centerY" secondItem="cJa-zi-s7U" secondAttribute="centerY" id="Axd-K3-Ot4"/>
+                            <constraint firstAttribute="centerY" secondItem="odQ-Y0-clt" secondAttribute="centerY" id="Cgg-Nh-Qle"/>
+                            <constraint firstItem="475-9A-5HC" firstAttribute="leading" secondItem="cJa-zi-s7U" secondAttribute="trailing" constant="27" id="Fkx-4N-zFQ"/>
                             <constraint firstItem="w0j-Ux-tT5" firstAttribute="top" secondItem="6ro-RP-s1U" secondAttribute="bottom" id="Fvw-dN-rcE"/>
+                            <constraint firstItem="Ybt-3v-LBb" firstAttribute="trailing" secondItem="qq4-S4-WQH" secondAttribute="trailingMargin" id="KJ2-ez-xg8"/>
                             <constraint firstItem="w0j-Ux-tT5" firstAttribute="leading" secondItem="qq4-S4-WQH" secondAttribute="leadingMargin" id="NKN-m1-Ia7"/>
+                            <constraint firstItem="Om3-Ha-SLh" firstAttribute="leading" secondItem="Frh-iy-tMk" secondAttribute="trailing" constant="7.5" id="RKr-tN-ra1"/>
+                            <constraint firstItem="ozw-C2-Ptc" firstAttribute="top" secondItem="6ro-RP-s1U" secondAttribute="bottom" constant="8" id="Y2B-cz-lU7"/>
+                            <constraint firstItem="Ybt-3v-LBb" firstAttribute="top" secondItem="Frh-iy-tMk" secondAttribute="bottom" constant="8" id="dZr-FU-hQB"/>
+                            <constraint firstAttribute="centerX" secondItem="Om3-Ha-SLh" secondAttribute="centerX" constant="-0.25" id="e43-hg-fa4"/>
+                            <constraint firstAttribute="centerY" secondItem="475-9A-5HC" secondAttribute="centerY" id="htx-3d-Jbk"/>
+                            <constraint firstItem="Ybt-3v-LBb" firstAttribute="top" secondItem="Om3-Ha-SLh" secondAttribute="bottom" constant="8" id="k2i-1v-guk"/>
+                            <constraint firstItem="odQ-Y0-clt" firstAttribute="leading" secondItem="cJa-zi-s7U" secondAttribute="trailing" constant="8" id="kZz-YD-CQM"/>
+                            <constraint firstItem="cJa-zi-s7U" firstAttribute="leading" secondItem="L0b-tC-KKJ" secondAttribute="trailing" constant="25" id="uHv-ZZ-yxG"/>
+                            <constraint firstItem="ozw-C2-Ptc" firstAttribute="trailing" secondItem="qq4-S4-WQH" secondAttribute="trailingMargin" id="wHF-rY-qnD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="levelLabel" destination="Ybt-3v-LBb" id="SfP-a5-BFa"/>
+                        <outlet property="levelOperator" destination="3o1-cb-hTQ" id="5Fs-ad-oge"/>
+                        <outlet property="resultingView" destination="475-9A-5HC" id="qlK-gu-KCX"/>
+                        <outletCollection property="initialVariables" destination="L0b-tC-KKJ" collectionClass="NSMutableArray" id="orl-7D-J63"/>
+                        <outletCollection property="initialVariables" destination="cJa-zi-s7U" collectionClass="NSMutableArray" id="Cqr-Ym-FdW"/>
+                        <outletCollection property="answerOptions" destination="Frh-iy-tMk" collectionClass="NSMutableArray" id="XG5-SX-mwL"/>
+                        <outletCollection property="answerOptions" destination="Om3-Ha-SLh" collectionClass="NSMutableArray" id="Elh-3j-zdp"/>
+                        <outletCollection property="answerOptions" destination="ITj-VZ-VMz" collectionClass="NSMutableArray" id="k7S-wE-ABa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9cp-XI-IjA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="zH6-OK-boS" userLabel="Exit" sceneMemberID="exit"/>
@@ -481,7 +590,7 @@
                         <outlet property="mathIcon" destination="WO5-qH-QTt" id="KRc-gA-iNw"/>
                         <outlet property="memoryIcon" destination="KTY-ub-tFf" id="NiO-Rr-ecK"/>
                         <outlet property="settingsIcon" destination="ahc-yB-tC6" id="zlk-Vf-yUv"/>
-                        <segue destination="eXt-9J-WGX" kind="presentation" identifier="mathSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="Vip-Dz-q2o"/>
+                        <segue destination="eXt-9J-WGX" kind="show" identifier="mathSegue" id="Vip-Dz-q2o"/>
                         <segue destination="pJp-aR-KBz" kind="show" identifier="memorySegue" id="bwL-a3-XWp"/>
                         <segue destination="vwz-1Q-11g" kind="show" identifier="logicSegue" id="vt6-8R-mwy"/>
                         <segue destination="IW5-6y-tSh" kind="presentation" identifier="settingsSegue" id="F0y-OF-0R1"/>

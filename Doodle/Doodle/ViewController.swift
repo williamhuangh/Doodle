@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var mathIcon: UIImageView!
     @IBOutlet weak var memoryIcon: UIImageView!
     @IBOutlet weak var logicIcon: UIImageView!
@@ -31,13 +32,13 @@ class ViewController: UIViewController {
     func mathGameTapped(gesture: UITapGestureRecognizer){
         if gesture.state == .Ended{
             UIView.animateWithDuration(1.0, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-                self.memoryIcon.alpha = 0.0
-                self.logicIcon.alpha = 0.0
-                self.settingsIcon.alpha = 0.0
-                self.mathIcon.center = self.view.center
+                    self.memoryIcon.alpha = 0.0
+                    self.logicIcon.alpha = 0.0
+                    self.settingsIcon.alpha = 0.0
+                    self.mathIcon.center = self.view.center
                 }) { (finished) -> Void in
                     self.performSegueWithIdentifier("mathSegue", sender: self)
-            }
+                }
         }
     }
     
