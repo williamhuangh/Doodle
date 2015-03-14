@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class MathGameViewController: UIViewController, MathGameLogicDelegate {
     
-    
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
     @IBOutlet var initialVariables: [EquationVariable]!
     @IBOutlet var answerOptions: [EquationVariable]!
     private var originalCenter = CGPointMake(0, 0)
@@ -23,7 +24,7 @@ class MathGameViewController: UIViewController, MathGameLogicDelegate {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blackColor()
         addGestureRecognizers()
-        self.newGame()
+        self.startNewGame()
     }
     
     func addGestureRecognizers(){
@@ -55,6 +56,21 @@ class MathGameViewController: UIViewController, MathGameLogicDelegate {
     }
     
     @IBAction func newGame() {
+        if levelLabel.text == "Level: 2"{
+            let mathGameHistory = NSEntityDescription.insertNewObjectForEntityForName("MathGameHistory", inManagedObjectContext: managedObjectContext!) as MathGameHistory
+            mathGameHistory.timeStamp = NSDate()
+            mathGameHistory.levelsCompleted = 1
+            managedObjectContext?.save(nil)
+        } else if levelLabel.text == "Level: 3"{
+            let mathGameHistory = NSEntityDescription.insertNewObjectForEntityForName("MathGameHistory", inManagedObjectContext: managedObjectContext!) as MathGameHistory
+            mathGameHistory.timeStamp = NSDate()
+            mathGameHistory.levelsCompleted = 2
+            managedObjectContext?.save(nil)
+        }
+        startNewGame()
+    }
+    
+    func startNewGame(){
         mathGameLogic = MathGameLogic(initialVariables: initialVariables, answerOptions: answerOptions, level: 1)
         mathGameLogic.delegate = self
         self.levelOperator.text = "+"
@@ -92,14 +108,20 @@ class MathGameViewController: UIViewController, MathGameLogicDelegate {
     }
     
     func displayRestartAndEndOptions(sender: MathGameLogic) {
+        let mathGameHistory = NSEntityDescription.insertNewObjectForEntityForName("MathGameHistory", inManagedObjectContext: managedObjectContext!) as MathGameHistory
+        mathGameHistory.levelsCompleted = 3
+        mathGameHistory.timeStamp = NSDate()
+        managedObjectContext?.save(nil)
+        
         var alert = UIAlertController(title: "You Won!", message: "Restart Game?", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(
             title: "Yes", style: .Default, handler: { (act) -> Void in
-                self.newGame()
+                self.startNewGame()
             }
             ))
         alert.addAction(UIAlertAction(
             title: "No", style: .Default, handler: { (act) -> Void in
+                self.levelLabel.text = "Level: 1"
                 self.performSegueWithIdentifier("exitMathGame", sender: self)
             }
             ))
@@ -112,5 +134,21 @@ class MathGameViewController: UIViewController, MathGameLogicDelegate {
     
     override func supportedInterfaceOrientations() -> Int {
         return Int(UIInterfaceOrientationMask.Portrait.rawValue)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "exitMathGame"{
+            if levelLabel.text == "Level: 2"{
+                let mathGameHistory = NSEntityDescription.insertNewObjectForEntityForName("MathGameHistory", inManagedObjectContext: managedObjectContext!) as MathGameHistory
+                mathGameHistory.timeStamp = NSDate()
+                mathGameHistory.levelsCompleted = 1
+                managedObjectContext?.save(nil)
+            } else if levelLabel.text == "Level: 3"{
+                let mathGameHistory = NSEntityDescription.insertNewObjectForEntityForName("MathGameHistory", inManagedObjectContext: managedObjectContext!) as MathGameHistory
+                mathGameHistory.timeStamp = NSDate()
+                mathGameHistory.levelsCompleted = 2
+                managedObjectContext?.save(nil)
+            }
+        }
     }
 }

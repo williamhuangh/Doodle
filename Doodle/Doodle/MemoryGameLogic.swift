@@ -112,7 +112,6 @@ class MemoryGameLogic {
                 cardsMatched++
                 if cardsMatched == cards.count && level < 3{
                     self.delegate.didUpdateLevel(self, newLevel: level + 1)
-                    resetCards(level + 1)
                 } else if cardsMatched == cards.count && level == 3{
                     self.delegate.displayRestartAndEndOptions(self)
                 }
